@@ -60,4 +60,50 @@ const entries = [
 ];
 
 // groupBy 
-const entriesByAuthor = lodash.groupBy(entries)
+const entriesGrouppedByAuthor = lodash.groupBy(entries, "autor");
+// console.log(entriesByAuthor["Juan Pérez"]);
+
+// filter
+function filterByHtml5Tag(entry) {
+  return lodash.includes(entry.tags, "HTML5");
+}
+const entriesFilteredByHtml5Tag = lodash.filter(entries, filterByHtml5Tag)
+// console.log(entriesFilteredByHtml5Tag);
+
+// map
+const entriesMappedByTitle = lodash.map(entries, "titulo");
+// console.log(entriesMappedByTitle);
+
+// orderBy
+const entriesOrderedByDate = lodash.orderBy(entries, "fecha", "desc");
+// console.log(entriesOrderedByDate);
+
+// reduce
+function countTags(acc, entry) {
+  return acc + entry.tags.length;
+}
+const countEntriesTags = lodash.reduce(entries, countTags, 0)
+// console.log(countEntriesTags);
+
+// ----------- //
+
+// merge
+const mergedEntries = lodash.merge(entries[0], entries[1])
+// console.log(mergedEntries);
+
+// pick 
+const pickedTitleTagsEntry = lodash.pick(entries[0], ["titulo", "tags"])
+// console.log(pickedTitleTagsEntry);
+
+// omit
+const omittedDescriptionEntry = lodash.omit(entries[0], ["descripcion"], ["tags"])
+// console.log(omittedDescriptionEntry)
+
+// has
+const hasDateEntry = lodash.has(entries[0], "fecha")
+// console.log(hasDateEntry)
+
+// invert 
+
+
+
