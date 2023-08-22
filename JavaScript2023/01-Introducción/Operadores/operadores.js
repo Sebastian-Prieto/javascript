@@ -64,14 +64,15 @@
 // const userAge = 13;
 // const haveEntry = true;
 
-edad = prompt("Enter your age: ");
-const allowAccess = true ? edad >=18 : allowAccess = false;
+// edad = prompt("Enter your age: ");
+// const allowAccess = true ? edad >=18 : allowAccess = false;
 
-if (allowAccess === true)  {
-    alert("Welcome! 🤠");
-} else {
-    alert("You don't have access to the concert. 🥶");
-}
+// if (allowAccess === true)  {
+//     alert("Welcome! 🤠");
+// } else {
+//     alert("You don't have access to the concert. 🥶");
+// }
 
 // const allowAccess = true ? userAge >=18 : allowAccess = false;
 // console.log(allowAccess);
+
