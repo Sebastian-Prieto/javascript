@@ -58,3 +58,10 @@ getNLetters('Sebastián');
     - Pertenecen las variables declaradas con const o let dentro de un bloque {}
     - Sólo se puede acceder a ellas desde dentro del bloque
 */
+const favouriteCountry = 'Norway';
+const travelTo = false;
+if (favouriteCountry === 'Norway') {
+    const travelTo = true;
+    console.log(travelTo);
+}
+console.log(travelTo);
