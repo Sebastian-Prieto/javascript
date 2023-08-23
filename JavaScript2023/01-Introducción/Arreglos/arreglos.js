@@ -58,5 +58,91 @@ console.log(amigos);
 const nuevosAmigos = amigos.slice(1, 3);
 console.log(nuevosAmigos);
 // .indexOf() -> Nos permite obtener el primer index de un elemento, si no hay elementos, retorna -1
-amigos.indexOf = ['Gelso'];
-console.log(amigos);
+const myVideoGames = ['COD', 'CSGO', 'LOL', 'Minecraft', 'WOW', 'NFS', 'LOL']
+console.log(myVideoGames.indexOf('LOL'));   
+// .lastIndexOf() -> Nos permite obtener el último índex de un elemento
+console.log(myVideoGames.lastIndexOf('LOL')); 
+// .forEach() -> Nos permite ejecutar una función por cada elemento
+const mySports = ['Soccer', 'Tennis', 'Baseball', 'Volleyball'];
+mySports.forEach((sport, index)=> {
+    console.log(`(${index}) - Hello ${sport}`);
+});
+// .find() -> Nos permite recorrer un arreglo y devuelve el PRIMER elemento que retornemos
+const vegetables = ['Onion', 'Carrot', 'Tomato', 'Avocado', 'Lettuce', 'OtherFruit1', 'OtherFruit2'];
+// La variable tiene como función decir que va a ser igual a lo que le retorne la función
+const resultado = vegetables.find((vegetable)=> {
+    if (vegetable[0] === 'O') {
+        return vegetable;
+    }
+});
+console.log(resultado);
+
+resultadoForEach = vegetables.forEach((vegetable)=> {
+    if (vegetable[0] === 'O') {
+        console.log(vegetable);
+    }
+});
+
+// .map() -> Nos permite ejecutar una función por cada elemento y crear un nuevo arreglo en base a los
+// resultados de dicha función.
+const band = ['Oliver', 'Lee', 'Jordan'];
+const upperBand = band.map((singer) => {
+    return singer.toUpperCase();
+})
+console.log(upperBand);
+// .filter() -> Nos permite ejecutar una función por cada elemento y crear un arreglo
+// a base de los resultados de dicha función
+const manCityPlayers = ['Ederson', 'Stones', 'Akanji', 'Grealish', 'Haaland', 'Pill'];
+const fourLetters = manCityPlayers.filter((players) => {
+    return players.length === 7;
+})
+console.log(fourLetters);
+// .includes() -> Nos permite saber si un arreglo contiene un elemento especificado
+const instruments = ['Guitar', 'Banjo', 'Piano', 'Drums'];
+console.log(instruments.includes('Banjo'));
+// .every() -> Nos permite ejecutar un condicional sobre cada elemento y nos
+// devuelve TRUE si TODOS los elementos cumplieron la condición
+const resultEvery = instruments.every((instrument) => {
+    if (typeof instrument === 'string') {
+        return true;
+    } else {
+        false;
+    }
+})
+console.log(resultEvery);
+
+// some() -> Nos permite ejecutar un condicional sobre cada elemento y nos
+// devuelve TRUE si ALGÚN de los elementos cumplió la condición
+const resultSome = instruments.some((instrument) => {
+    if (typeof instrument !== 'string') {
+        return true;
+    } else {
+        false;
+    }
+})
+console.log('Es ' + resultSome);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
