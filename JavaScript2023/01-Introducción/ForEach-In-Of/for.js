@@ -17,3 +17,6 @@ console.log(propiedad);
 // Mapas, Listas de nodos, etc...
 const etiquetas = document.head.children;
 console.log(etiquetas);
+for (elemento of etiquetas) {
+    console.log(elemento);
+}
